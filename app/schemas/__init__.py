@@ -1,0 +1,1 @@
+from .ingresos import ingreso_schema, ingresos_schema
