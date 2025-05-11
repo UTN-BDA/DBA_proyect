@@ -3,7 +3,7 @@ marshmallow==3.20.1
 Flask-SQLAlchemy==3.0.5
 SQLAlchemy==2.0.20
 Flask-Migrate==4.0.4
-psycopg2==2.9.7
+psycopg2==2.9.7 #si no funciona instalar la versión +reciente
 psycopg[binary]
 python-dotenv
 sqlalchemy-easy-softdelete==0.8.3

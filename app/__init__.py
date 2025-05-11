@@ -1,10 +1,14 @@
 import os
 from flask import Flask
-from flask_marshmallow import Marsmallow
-from app.Config import config
+from flask_marshmallow import Marshmallow
+from app.Config import confi
 from flask_cors import CORS
+from flask_migrate import Migrate
+from flask_sqlalchemy import SQLAlchemy
 
-ma=Marsmallow
+db = SQLAlchemy()
+migrate = Migrate()
+ma = Marshmallow()
 
 def create_app()->Flask:
 
@@ -14,6 +18,10 @@ def create_app()->Flask:
     app.config.from_object(f)
     ma.init_app(app)
     CORS(app)
+
+    ma.init_app(app)
+    db.init_app(app)
+    migrate.init_app(app,db)
 
     #from app.Routes import ...
     #app.register_blueprint(...)
