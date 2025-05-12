@@ -3,7 +3,7 @@ from app.models import Categorias
 from sqlalchemy.exc import IntegrityError, NoResultFound
 
 class CategoriasRepositorio:
-    def agregar_categoria(self, categoria: Categorias) -> Categorias:
+    def agregar_categoria(self, categoria: c) -> Categorias:
         try:
             db.session.add(categoria) 
             db.session.commit()
@@ -31,3 +31,6 @@ class CategoriasRepositorio:
 
     def listar_categorias(self) -> list[Categorias]:
         return db.session.query(Categorias).all()
+    
+    def buscar_por_id(self, id: int) -> Categorias:
+        return db.session.query(Categorias).filter_by(id_categoria = id).one()
