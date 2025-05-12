@@ -1,5 +1,5 @@
 from app import db
-from app .models import Ingresos
+from app.models import Ingresos
 from sqlalchemy.exc import IntegrityError, NoResultFound
 
 class IngresosRepositorios:
