@@ -16,7 +16,7 @@ class CategoriasRepositorio:
         try:
             db.session.delete(categoria)
             db.session.commit()
-        except IntegrityError as e:
+        except NoResultFound as e:
             db.session.rollback()
             raise e
 
@@ -33,4 +33,7 @@ class CategoriasRepositorio:
         return db.session.query(Categorias).all()
     
     def buscar_por_id(self, id: int) -> Categorias:
-        return db.session.query(Categorias).filter_by(id_categoria = id).one()
+        try:
+            return db.session.query(Categorias).filter_by(id_categoria = id).one()
+        except NoResultFound as e:
+            raise e

@@ -1,7 +1,7 @@
 import os
 from flask import Flask
 from flask_marshmallow import Marshmallow
-from app.Config import config
+from app.Config import config # type: ignore
 from flask_cors import CORS
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
@@ -23,8 +23,8 @@ def create_app()->Flask:
     db.init_app(app)
     migrate.init_app(app,db)
 
-    #from app.Routes import ...
-    #app.register_blueprint(...)
+    from app.routes import categorias 
+    app.register_blueprint(categorias)
 
     @app.shell_context_processor
     def ctx():
