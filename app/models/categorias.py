@@ -13,4 +13,4 @@ class Categorias(db.Model):
 
     # Relación one-to-many: https://docs.sqlalchemy.org/en/14/orm/basic_relationships.html#one-to-many
     # Una categoria - muchos egresos
-    #egresos_cat = db.relationship("Egresos", back_populates="categs", cascade="all, delete-orphan")
+    egresos_cat = db.relationship("Egresos", back_populates="categs", cascade="all, delete-orphan")
