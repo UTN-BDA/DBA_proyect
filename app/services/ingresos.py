@@ -2,7 +2,7 @@ from app.models import Ingresos
 #from app.repositories import IngresosRepositorio #to do
 
 class IngresosServicios():
-    def agregar_saldo():
+    """ def agregar_saldo():
         pass
 
     def consultar_ingresos():
@@ -12,4 +12,4 @@ class IngresosServicios():
         pass
     
     def eliminar_ingresos():
-        pass
+        pass """

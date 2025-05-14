@@ -1,6 +1,6 @@
 from app import ma
 
-class CategoriasSchema:
+class CategoriasSchema(ma.Schema):
     class Meta:
         fields = ('id_categoria', 'nombre', 'descripcion')
 

@@ -12,7 +12,7 @@ class IngresosRepositorios:
             db.session.rollback()
             raise e
         
-#acá va delete
+""" #acá va delete
     def eliminar_ingresos(self,...): #investigar 
         pass
 
@@ -22,3 +22,4 @@ class IngresosRepositorios:
     def modificar_ingresos(self, ...):
         pass
 
+ """
