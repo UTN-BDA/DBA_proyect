@@ -1,7 +1,7 @@
 import os
 from flask import Flask
 from flask_marshmallow import Marshmallow
-from app.Config import config # type: ignore
+from app.Config import config
 from flask_cors import CORS
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
