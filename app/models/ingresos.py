@@ -6,7 +6,7 @@ class Ingresos(db.Model):
 
     id = db.Column('id', db.Integer, primary_key=True, autoincrement=True)
     monto = db.Column('monto', db.Float, nullable=False)
-    fecha = db.Column('fecha', db.Datetime(timezone=True), default=func.now(), nullable=False)
+    fecha = db.Column('fecha', db.DateTime(timezone=True), default=func.now(), nullable=False)
     detalle = db.Column('detalle', db.String(255))
     
     # Relación many-to-one: https://docs.sqlalchemy.org/en/14/orm/basic_relationships.html#one-to-many
