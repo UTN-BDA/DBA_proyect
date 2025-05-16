@@ -11,15 +11,22 @@ class IngresosRepositorios:
         except IntegrityError as e:
             db.session.rollback()
             raise e
+             
+    def consultar_ingresos(self, ingreso_id: int) -> Ingresos:
+         try:
+             return db.session.query(Ingresos).filter_by(id = ingreso_id).one()
+         except NoResultFound as e:
+             raise e
         
-""" #acá va delete
-    def eliminar_ingresos(self,...): #investigar 
-        pass
-
-    def consultar_ingresos(self,..):
-        pass
-
-    def modificar_ingresos(self, ...):
-        pass
-
- """
+        
+    def eliminar_ingresos(self, ingreso: Ingresos):
+        try:
+            db.session.delete(ingreso)
+            db.session.commit()
+            
+        except Exception as e:
+            db.session.rollback()
+            raise e
+    
+    #localmente nos conviene hacerlo?
+   
