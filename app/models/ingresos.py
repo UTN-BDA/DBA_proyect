@@ -2,7 +2,7 @@ from app import db
 from sqlalchemy.sql import func
 
 class Ingresos(db.Model):
-    __tablename__ = 'Ingresos'
+    __tablename__ = 'ingresos'
 
     id = db.Column('id', db.Integer, primary_key=True, autoincrement=True)
     monto = db.Column('monto', db.Float, nullable=False)
