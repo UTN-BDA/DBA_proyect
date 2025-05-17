@@ -3,7 +3,7 @@ import random
 
 fake = Faker()
 
-categorias_ingresos = ['Salario', 'Bonus', 'Inversión', 'Ingreso Ectra']
+categorias_ingresos = ['Salario', 'Bonus', 'Inversión', 'Ingreso Extra']
 categorias_egresos = ['Alimentación', 'Transporte', 'Entretenimiento', 'Educación', 'Salud']
 
 def generar_categorias_realistas(tipo='ingreso', cantidad=5):

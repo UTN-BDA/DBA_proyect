@@ -15,8 +15,8 @@ class CategoriaTestCase(unittest.TestCase):
         
         
     def test_agregar_varios_egresos(self):
-        #En el faker services, ( recibe como argumento la catidad de egresos, el id de categoria que serian para
-        # egresos en este caso yo considere del 6 al 10, pero es en el orden que primeo inicie los test)
+        #En el faker services( recibe como argumento la catidad de egresos, el id de categoria que serian para
+        # egresos en este caso yo considere del 6 al 10, pero es en el orden que primeo inicie el test de categorias)
         egresos_data = faker_service(cantidad = 1000, x1=6, x2=10)
 
         for data in egresos_data:
@@ -34,6 +34,6 @@ class CategoriaTestCase(unittest.TestCase):
             self.assertIsNotNone(egreso.fecha)
 
         total_egresos = db.session.query(Egresos).count()
-        # verfica la cantidad en la base de datos, tiene que ser acorde al numero de
-        # egresos que genere 
+        # Verfica la cantidad en la base de datos, tiene que ser acorde al numero de
+        # egresos que se genera.
         self.assertEqual(total_egresos, 1000)

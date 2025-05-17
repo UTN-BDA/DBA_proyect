@@ -15,7 +15,7 @@ class CategoriaTestCase(unittest.TestCase):
         
         
     def test_agregar_varios_ingresos(self):
-        # En el faker services, ( recibe como argumento la catidad de ingresos, el id de categoria que serian para
+        # En el faker services( recibe como argumento la catidad de ingresos, el id de categoria que serian para
         # ingresos en este caso yo considere del 1 al 5, pero es en el orden que primeo inice el test para categoria)
         ingresos_data = faker_service(cantidad = 1000, x1 = 1, x2 = 5)
 
@@ -28,5 +28,5 @@ class CategoriaTestCase(unittest.TestCase):
 
         total_ingresos = db.session.query(Ingresos).count()
         # verfica la cantidad en la base de datos, tiene que ser acorde al numero de
-        # ingresos que genere 
+        # ingresos que se genera.
         self.assertEqual(total_ingresos, 1000)

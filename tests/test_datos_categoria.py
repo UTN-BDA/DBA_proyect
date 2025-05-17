@@ -17,7 +17,7 @@ class CategoriaTestCase(unittest.TestCase):
         self.app_context.pop()
 
     def test_agregar_varias_categorias(self):
-        # Generar 5 categorías aleatorias, se le tiene que pasar el tipo si es de ingreso o egreso y la cantidad de 
+        # Se le tiene que pasar el tipo si es de ingreso o egreso y la cantidad de 
         # de categorias.
         categorias_data = generar_categorias_realistas(tipo='ingreso', cantidad=5)
         
