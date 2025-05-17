@@ -6,7 +6,7 @@ fake = Faker()
 categorias_ingresos = ['Salario', 'Bonus', 'Inversión', 'Ingreso Ectra']
 categorias_egresos = ['Alimentación', 'Transporte', 'Entretenimiento', 'Educación', 'Salud']
 
-def generar_categorias_realistas(tipo='ingreso', cantidad=3):
+def generar_categorias_realistas(tipo='ingreso', cantidad=5):
     categorias = []
     if tipo == 'ingreso':
         lista = categorias_ingresos

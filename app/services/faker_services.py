@@ -3,7 +3,7 @@ import random
 
 fake = Faker()
 
-def faker_service(cantidad, x1, x2):
+def faker_service(cantidad=1000, x1=0, x2=0):
     resultados = []
     for _ in range(cantidad):
         monto = fake.pyfloat(left_digits=4, right_digits=2, positive=True, min_value=1000, max_value=10000)
