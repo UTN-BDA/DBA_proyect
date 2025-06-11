@@ -23,8 +23,9 @@ def create_app()->Flask:
     db.init_app(app)
     migrate.init_app(app,db)
 
-    from app.routes import categorias 
+    from app.routes import categorias, egresos
     app.register_blueprint(categorias)
+    app.register_blueprint(egresos)
 
     @app.shell_context_processor
     def ctx():
