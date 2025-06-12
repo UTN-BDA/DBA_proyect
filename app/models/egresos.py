@@ -11,3 +11,7 @@ class Egresos(db.Model):
 
     categoria_id = db.Column('categoria_id', db.Integer, db.ForeignKey('categorias.id_categoria'), nullable=False)
     categs = db.relationship('Categorias', back_populates='egresos_cat')
+
+    __table_args__ = (
+        db.Index('idx_egresos_fecha_categoria', 'fecha','categoria_id'),
+    )
