@@ -1,6 +1,7 @@
 from app import db
 from app.models import Ingresos
 from sqlalchemy.exc import IntegrityError, NoResultFound
+from sqlalchemy import func
 
 class IngresosRepositorios:
     def agregar_saldo(self, ingreso: Ingresos) ->Ingresos:
@@ -27,6 +28,9 @@ class IngresosRepositorios:
         except Exception as e:
             db.session.rollback()
             raise e
+    
+    def total_ingresos(self):
+        return db.session.query(func.sum(Ingresos.monto)).scalar()
     
     #localmente nos conviene hacerlo?
    

@@ -18,6 +18,8 @@ def retirar_saldo():
             resp = jsonify(excepcion.messages), 422
         elif isinstance(excepcion, IntegrityError):
             resp = jsonify('No existe categoria ingresada'), 422
+        elif isinstance(excepcion, ValueError):
+            resp = jsonify('Saldo insuficiente'), 422
         else:
             resp = jsonify('Error inesperado'), 500
     

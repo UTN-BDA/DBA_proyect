@@ -16,7 +16,11 @@ class IngresosServicios:
         
      def consultar_ingresos(self, ingreso_id: int) -> Ingresos:
          return self.repo.consultar_ingresos(ingreso_id)
-       
+     
+     def total_ingresos(self):
+        total = self.repo.total_ingresos()
+        return total if total else 0
+     
     #  def consultar_ingresos(self, ingreso_id: int) -> Ingresos:
     #      repo = IngresosRepositorios()
     #      return repo.consultar_ingresos(ingreso_id)

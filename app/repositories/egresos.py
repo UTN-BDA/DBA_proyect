@@ -21,3 +21,6 @@ class EgresosRepositorio:
     def filtrar_por_fecha(self, fecha: date):
         return db.session.query(Egresos).filter(func.date(Egresos.fecha) == fecha).all()
         # func.date() obtiene solo la parte de la fecha, ignorando la hora
+    
+    def total_gastos(self):
+        return db.session.query(func.sum(Egresos.monto)).scalar()
