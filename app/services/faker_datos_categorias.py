@@ -4,9 +4,9 @@ import random
 fake = Faker()
 
 categorias_ingresos = ['Salario', 'Bonus', 'Inversión', 'Ingreso Extra']
-categorias_egresos = ['Alimentación', 'Transporte', 'Entretenimiento', 'Educación', 'Salud']
+categorias_egresos = ['Alimentación', 'Transporte', 'Entretenimiento', 'Educación', 'Salud', 'Vestimenta', 'Otros']
 
-def generar_categorias_realistas(tipo='ingreso', cantidad=5):
+def generar_categorias_realistas(tipo, cantidad=5):
     categorias = []
     if tipo == 'ingreso':
         lista = categorias_ingresos

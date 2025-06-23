@@ -1,5 +1,5 @@
 from app.models import Ingresos
-from app.repositories import IngresosRepositorios #to do
+from app.repositories import IngresosRepositorios
 
 class IngresosServicios:
      repo= IngresosRepositorios()

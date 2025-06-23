@@ -1,7 +1,6 @@
 from app.models import Egresos
 from app.repositories import EgresosRepositorio
 from app.services.ingresos import IngresosServicios
-# from app.services.balance import Balance
 from datetime import date
 
 class EgresosServicio:
