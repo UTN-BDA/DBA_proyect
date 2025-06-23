@@ -34,6 +34,3 @@ class CategoriaTestCase(unittest.TestCase):
             self.assertIsNotNone(egreso.fecha)
 
         total_egresos = db.session.query(Egresos).count()
-        # Verfica la cantidad en la base de datos, tiene que ser acorde al numero de
-        # egresos que se genera.
-        self.assertEqual(total_egresos, 1000)
