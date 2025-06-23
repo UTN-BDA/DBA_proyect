@@ -25,4 +25,4 @@ class CategoriaServicios:
             raise KeyError
 
     def listar_categorias(self) -> list[Categorias]:
-        return self.repository.listar_categorias
+        return self.repository.listar_categorias()

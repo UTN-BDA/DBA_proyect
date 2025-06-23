@@ -32,5 +32,7 @@ class IngresosRepositorios:
     def total_ingresos(self):
         return db.session.query(func.sum(Ingresos.monto)).scalar()
     
-    #localmente nos conviene hacerlo?
+    def listar_ingresos(self) -> list[Ingresos]:
+        return db.session.query(Ingresos).all()
+    
    

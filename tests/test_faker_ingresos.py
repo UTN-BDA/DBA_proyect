@@ -17,7 +17,7 @@ class CategoriaTestCase(unittest.TestCase):
     def test_agregar_varios_ingresos(self):
         # En el faker services( recibe como argumento la catidad de ingresos, el id de categoria que serian para
         # ingresos en este caso yo considere del 1 al 5, pero es en el orden que primeo inice el test para categoria)
-        ingresos_data = faker_service(cantidad = 1000, x1 = 1, x2 = 5)
+        ingresos_data = faker_service(cantidad = 4, x1 = 1, x2 = 3)
 
         for data in ingresos_data:
             ingreso = self.service.agregar_saldo(**data)

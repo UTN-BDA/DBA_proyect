@@ -19,7 +19,7 @@ class CategoriaTestCase(unittest.TestCase):
     def test_agregar_varias_categorias(self):
         # Se le tiene que pasar el tipo si es de ingreso o egreso y la cantidad de 
         # de categorias.
-        categorias_data = generar_categorias_realistas(tipo='ingreso', cantidad=5)
+        categorias_data = generar_categorias_realistas(tipo='egreso', cantidad=3)
         
         for categoria_data in categorias_data:
             categoria = self.service.agregar_categoria(categoria_data)

@@ -17,7 +17,7 @@ class CategoriaTestCase(unittest.TestCase):
     def test_agregar_varios_egresos(self):
         #En el faker services( recibe como argumento la catidad de egresos, el id de categoria que serian para
         # egresos en este caso yo considere del 6 al 10, pero es en el orden que primeo inicie el test de categorias)
-        egresos_data = faker_service(cantidad = 1000, x1=6, x2=10)
+        egresos_data = faker_service(cantidad = 3, x1=4, x2=6)
 
         for data in egresos_data:
             

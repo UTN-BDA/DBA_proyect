@@ -37,3 +37,7 @@ def gastos_por_fecha(fecha):
         return egresos_schema.dump(gastos)
     except ValueError:
         return jsonify('Formato de fecha incorrecto. Debe ser AAAA-MM-DD')
+    
+@egresos.route('/listar_egresos', methods = ['GET'])
+def listar_egresos():
+    return egresos_schema.dump(egresos_servicio.listar_egresos())

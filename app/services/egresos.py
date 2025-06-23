@@ -27,3 +27,6 @@ class EgresosServicio:
     def total_gastos(self):
         total = self.__egreso_repositorio.total_gastos()
         return total if total else 0
+    
+    def listar_egresos(self) -> list[Egresos]:
+        return self.__egreso_repositorio.listar_egresos()

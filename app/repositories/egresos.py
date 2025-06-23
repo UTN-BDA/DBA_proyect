@@ -24,3 +24,7 @@ class EgresosRepositorio:
     
     def total_gastos(self):
         return db.session.query(func.sum(Egresos.monto)).scalar()
+
+    def listar_egresos(self) -> list[Egresos]:
+        return db.session.query(Egresos).all()
+    

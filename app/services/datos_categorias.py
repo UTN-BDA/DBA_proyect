@@ -13,12 +13,13 @@ def generar_categorias_realistas(tipo='ingreso', cantidad=5):
     else:
         lista = categorias_egresos
     
-    for _ in range(cantidad):
-        nombre = random.choice(lista)
+    # Verificar que la cantidad no exceda la cantidad de elementos en la lista
+    cantidad = min(cantidad, len(lista))
+    seleccionadas = random.sample(lista, cantidad)
+    for nombre in seleccionadas:
         descripcion = fake.sentence(nb_words=8)
         categorias.append({
             'nombre': nombre,
             'descripcion': descripcion
         })
     return categorias
-

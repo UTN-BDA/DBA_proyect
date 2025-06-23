@@ -21,18 +21,5 @@ class IngresosServicios:
         total = self.repo.total_ingresos()
         return total if total else 0
      
-    #  def consultar_ingresos(self, ingreso_id: int) -> Ingresos:
-    #      repo = IngresosRepositorios()
-    #      return repo.consultar_ingresos(ingreso_id)
-
-         
-
-
-
-
-    
-    # def consultar_ingresos():
-    #     pass
-
-    # def modificar_ingresos():
-    #     pass
+     def listar_ingresos(self) -> list[Ingresos]:
+         return self.repo.listar_ingresos()
