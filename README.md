@@ -15,14 +15,17 @@ El proyecto consite en desarrollar una base de datos para gestionar el control d
 - Python 3.11 o superior
 - Docker
 - Postgres (contenedor o local)
-- Configurar archivo .env con las credenciales para la conexión con la base de datos EN EL DIRECTORIO RAIZ
+- Configurar archivo .env con las credenciales para la conexión con la base de datos EN EL DIRECTORIO RAIZ. A modo de ejemplo, debería verse asi:\
+  `DEV_DATABASE_URI='postgresql+psycopg2://postgres:contrasena_postgres@localhost:5432/nombre_db'`\
+  `PROD_DATABASE_URI='postgresql+psycopg2://postgres:contrasena_postgres@localhost:5432/nombre_db'`\
+  `TEST_DATABASE_URI='postgresql+psycopg2://postgres:contrasena_postgres@localhost:5432/nombre_db'`\
 - Recomendado:\
-  Instalar entorno virtual (python -m venv .venv)\
-  Activar entorno virtual (cd ./venv/Scripts >> ./activate)
+  Instalar entorno virtual\
+  Activar entorno virtual
 
 ### Primera ejecución
 
-En la carpeta raíz, ejecutar el script `initial_script.sh`
+En la carpeta raíz, ejecutar el script `sh ./initial_script.sh`
 Para visualizar los resultados, abra el link proporcionado por la consola en su navegador (Ejemplo: Running on http://127.0.0.1:5000)
 
 ### Para ejecuciones posteriores
