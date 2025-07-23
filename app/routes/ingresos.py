@@ -8,7 +8,7 @@ servicios = IngresosServicios()
 @ingresos.route('/agregar', methods=['POST'])
 def agregar_ingreso():
     ingre = ingreso_schema.load(request.json)
-    return ingreso_schema.dump(servicios.agregar_saldo(ingre))
+    return ingreso_schema.dump(servicios.agregar_saldo(**ingre))
     
 
 @ingresos.route('/consultar/<int:id>', methods=['GET'])

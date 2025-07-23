@@ -11,8 +11,12 @@ class CategoriaServicios:
             setattr(categoria, key, value) if hasattr (categoria, key) else print("Atributo desconocido")
         return self.repository.agregar_categoria(categoria)
     
+    def buscar_por_id(self, id_cat: int) -> Categorias:
+        return self.repository.buscar_por_id(id_cat)
+
     def eliminar_categoria(self, id_cat: int) -> None:
-        return self.repository.eliminar_categoria(id_cat)
+        categoria = self.buscar_por_id(id_cat)
+        return self.repository.eliminar_categoria(categoria)
 
     def modificar_categoria(self, attr: dict, id_cat: int) -> Categorias:
         cat = self.repository.buscar_por_id(id_cat)

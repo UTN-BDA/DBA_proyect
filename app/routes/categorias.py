@@ -1,6 +1,6 @@
 from app.services import CategoriaServicios
 from app.schemas import categoria_schema, categorias_schema
-from flask import Blueprint, request
+from flask import Blueprint, request, jsonify
 
 categorias = Blueprint('categorias',__name__,url_prefix='/api/categorias')
 servicios = CategoriaServicios()
@@ -19,7 +19,8 @@ def modificar_categoria(id:int):
 
 @categorias.route('/eliminar/<int:id>', methods=['DELETE'])
 def eliminar_categoria(id: int):
-    return servicios.eliminar_categoria(id)
+    servicios.eliminar_categoria(id)
+    return jsonify(f'Categoria {id} eliminada')
 
 
 @categorias.route('/listar_categorias', methods = ['GET'])
