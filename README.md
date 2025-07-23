@@ -32,15 +32,25 @@ Para visualizar los resultados, abra el link proporcionado por la consola en su 
 
 En la carpeta raíz, ejecutar `python app.py` y luego abra el link proporcionado por la consola
 
-### Script de Backups lógicos
+### Backup y Restore Lógicos
 
 Previamente, se requiere 
 - Tener instalado postgres localmente (no necesariamente la BD también deba estarlo). 
 - En el caso de Windows, agregar al PATH la ruta donde se encuentran los comandos de postgres, típicamente en C:\Program Files\PostgreSQL\version\bin
 - Tener variable de entorno: `DEV_DATABSE_URI`, con el formato descripto anteriormente.
 
+#### Backup
+
 Desde la ruta raíz del proyecto, ejecutar el comando:
 `python .\backups\logical_backup.py`. Pedirá ingresar password del usuario que se use para la conexión.
+
+#### Restore
+
+La restauración se hace para una base de datos que esté recientemente creada, la cual no deba contener ninguna tabla
+
+Desde la ruta raíz del proyecto, ejecutar el comando:
+`python .\backups\logical_restore.py`. Pedirá ingresar password del usuario que se use para la conexión.
+
 
 ### Integrantes
 
